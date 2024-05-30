@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"fmt"
 	"log"
+	"os"
 
 	"github.com/yuin/goldmark"
 	"github.com/yuin/goldmark/parser"
@@ -11,15 +12,11 @@ import (
 )
 
 func Run() {
-	src := []byte(`---
-title: My Document
-tags: [example, demo]
----
-
-# Heading
-
-This is some *Markdown* content.
-`)
+	file, err := os.Open("testdata/example.md")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
 
 	var buf bytes.Buffer
 	md := goldmark.New(
@@ -27,7 +24,7 @@ This is some *Markdown* content.
 	)
 
 	ctx := parser.NewContext()
-	if err := md.Convert(src, &buf, parser.WithContext(ctx)); err != nil {
+	if err := md.Convert(file, &buf, parser.WithContext(ctx)); err != nil {
 		log.Fatal(err)
 	}
 
