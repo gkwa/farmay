@@ -3,6 +3,7 @@ package core
 import (
 	"bytes"
 	"fmt"
+	"io"
 	"log"
 	"os"
 
@@ -18,13 +19,18 @@ func Run() {
 	}
 	defer file.Close()
 
+	src, err := io.ReadAll(file)
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	var buf bytes.Buffer
 	md := goldmark.New(
 		goldmark.WithExtensions(&frontmatter.Extender{}),
 	)
 
 	ctx := parser.NewContext()
-	if err := md.Convert(file, &buf, parser.WithContext(ctx)); err != nil {
+	if err := md.Convert(src, &buf, parser.WithContext(ctx)); err != nil {
 		log.Fatal(err)
 	}
 
