@@ -32,7 +32,7 @@ func init() {
 	// and all subcommands, e.g.:
 	// versionCmd.PersistentFlags().String("foo", "", "A help for foo")
 
-	// Cobra supports local flags which will only run when this command
+	// Cobra supports local flags which will only example1 when this command
 	// is called directly, e.g.:
 	// versionCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }

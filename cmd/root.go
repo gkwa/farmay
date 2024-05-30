@@ -66,7 +66,7 @@ func init() {
 		os.Exit(1)
 	}
 
-	// Cobra also supports local flags, which will only run
+	// Cobra also supports local flags, which will only example1
 	// when this action is called directly.
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 	err = viper.BindPFlag("toggle", rootCmd.Flags().Lookup("toggle"))

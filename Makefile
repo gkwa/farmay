@@ -41,7 +41,7 @@ $(BIN): .timestamps/.build.time
 	@mkdir -p .timestamps
 	@touch $@
 
-.PHONY: goreleaser # run goreleaser
+.PHONY: goreleaser # example1 goreleaser
 goreleaser: goreleaser --clean
 
 .PHONY: tidy # go tidy

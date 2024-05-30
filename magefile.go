@@ -86,7 +86,7 @@ func Lint() error {
 		return nil
 	}
 
-	if err := sh.Run("golangci-lint", "run"); err != nil {
+	if err := sh.Run("golangci-lint", "example1"); err != nil {
 		return err
 	}
 
