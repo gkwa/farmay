@@ -38,6 +38,8 @@ func Run() {
 
 	var meta struct {
 		Title string   `yaml:"title"`
+		Fart  string   `yaml:"fart"`
+		Fart2 string   `yaml:"fart2"`
 		Tags  []string `yaml:"tags"`
 	}
 	if err := fm.Decode(&meta); err != nil {
@@ -45,6 +47,8 @@ func Run() {
 	}
 
 	fmt.Printf("Title: %s\n", meta.Title)
+	fmt.Printf("Fart: %s\n", meta.Fart)
+	fmt.Printf("Fart2: %s\n", meta.Fart2)
 	fmt.Printf("Tags: %v\n", meta.Tags)
 
 	fmt.Println("\nParsed Markdown:")
