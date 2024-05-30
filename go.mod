@@ -8,10 +8,13 @@ require (
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/viper v1.18.2
 	github.com/taylormonacelli/goldbug v0.0.6
+	github.com/yuin/goldmark v1.5.4
+	go.abhg.dev/goldmark/frontmatter v0.2.0
 )
 
 require (
 	dario.cat/mergo v1.0.0 // indirect
+	github.com/BurntSushi/toml v1.2.1 // indirect
 	github.com/Microsoft/go-winio v0.6.1 // indirect
 	github.com/ProtonMail/go-crypto v1.0.0 // indirect
 	github.com/cloudflare/circl v1.3.7 // indirect
