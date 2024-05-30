@@ -13,7 +13,8 @@ import (
 )
 
 func Run() {
-	file, err := os.Open("testdata/example.md")
+	markdown := "testdata/example1.md"
+	file, err := os.Open(markdown)
 	if err != nil {
 		log.Fatal(err)
 	}
