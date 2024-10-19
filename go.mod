@@ -8,7 +8,7 @@ require (
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/viper v1.18.2
 	github.com/taylormonacelli/goldbug v0.0.6
-	github.com/yuin/goldmark v1.7.1
+	github.com/yuin/goldmark v1.7.8
 	go.abhg.dev/goldmark/frontmatter v0.2.0
 	gopkg.in/yaml.v3 v3.0.1
 )
