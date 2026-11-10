@@ -2,7 +2,7 @@ module github.com/gkwa/farmay
 
 go 1.26.0
 
-toolchain go1.27.3
+toolchain go1.27.4
 
 require (
 	github.com/go-git/go-git/v5 v5.19.3
@@ -10,7 +10,7 @@ require (
 	github.com/spf13/cobra v1.10.2
 	github.com/spf13/viper v1.21.0
 	github.com/taylormonacelli/goldbug v0.0.6
-	github.com/yuin/goldmark/v2 v2.1.15
+	github.com/yuin/goldmark v1.7.13
 	github.com/yuin/goldmark/v2 v2.1.15
 	go.abhg.dev/goldmark/frontmatter v0.3.0
 	gopkg.in/yaml.v3 v3.0.1
